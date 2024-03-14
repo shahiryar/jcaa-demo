@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
-<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <title>JCAA Chatbot</title>
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
 </head>
 <body>
-<df-messenger
+    <df-messenger
   project-id="abacus-chatbot"
   agent-id="f8d800e0-991c-483c-9f3e-5475429881bc"
-  language-code="en"
-  max-query-length="-1"
-  allow-feedback="all">
-  <df-messenger-chat-bubble
-   chat-title="jcaa">
-  </df-messenger-chat-bubble>
-</df-messenger>
-<style>
-  df-messenger {
-    z-index: 999;
-    position: fixed;
-    bottom: 16px;
-    right: 16px;
-  }
-</style>
-<body/>
+      language-code="en"
+        allow-feedback="all"
+      max-query-length="-1">
+      <df-messenger-chat
+       chat-title="Jamaica Civil Aviation Authority's Chatbot" bot-writing-text="Give me a second to come up with a great answer for you!" 
+        placeholder-text="How may I help you?" bot-actor-image="JCAA-logo.jpg" user-actor-image="human.png"
+          chat-title-icon="JCAA-logo.jpg">
+      </df-messenger-chat>
+    </df-messenger>
+    <style>
+      df-messenger {
+        z-index: 999;
+        position: fixed;
+          --df-messenger-titlebar-title-font-size:24px;      
+          --df-messenger-titlebar-icon-height:45px;
+          --df-messenger-titlebar-icon-width:45px;
+        --df-messenger-message-bot-background:#f0c2b1;
+          --df-messenger-titlebar-font-color:#0369BB;
+          --df-messenger-send-icon-color-hover:#0b57d0;
+          --df-messenger-titlebar-subtitle-font-weight:1100;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+      }
+
+    </style>
+</body>
 </html>
